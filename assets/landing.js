@@ -49,3 +49,9 @@
     }
   });
 })();
+
+// En el móvil, la portada del vídeo vertical
+(() => {
+  const video = document.querySelector(".demo-video video");
+  if (video && matchMedia("(max-width: 640px)").matches) video.poster = video.dataset.posterV;
+})();
