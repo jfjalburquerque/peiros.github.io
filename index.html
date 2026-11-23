@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peiros · Simulador de pacientes para formación clínica</title>
+  <meta name="description" content="Peiros es un simulador de pacientes con IA para que estudiantes y profesionales de la psicología ensayen entrevistas clínicas sin riesgo y reciban una evaluación de su técnica.">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <script>
+    // Tema guardado antes de pintar, para evitar un parpadeo
+    try { const t = localStorage.getItem("peiros-theme"); if (t) document.documentElement.dataset.theme = t; } catch (_) {}
+  </script>
+  <link rel="stylesheet" href="assets/landing.css">
+  <script>window.PEIROS_APP_URL = null;</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Peiros, inicio">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="51 18.1"/><circle cx="23.8" cy="8.2" r="3.5" class="f-accent"/></svg>
+        peiros
+      </a>
+      <nav class="site-nav" aria-label="Secciones">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#pacientes">Pacientes</a>
+        <a href="#docentes">Para docentes</a>
+        <a href="#seguridad">Seguridad</a>
+        <a href="#equipo">Equipo</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        
+        <a class="btn btn-primary btn-small" href="#contacto">Solicitar demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="illustration" aria-hidden="true">
+          <svg viewBox="0 0 520 420">
+            <ellipse cx="262" cy="372" rx="236" ry="34" class="f-floor"/>
+            <!-- planta -->
+            <g>
+              <ellipse cx="82" cy="262" rx="12" ry="34" class="f-leaf" transform="rotate(-24 82 262)"/>
+              <ellipse cx="102" cy="250" rx="11" ry="38" class="f-teal" transform="rotate(6 102 250)"/>
+              <ellipse cx="120" cy="268" rx="11" ry="30" class="f-leaf" transform="rotate(32 120 268)"/>
+              <rect x="74" y="294" width="56" height="64" rx="10" class="f-brand"/>
+            </g>
+            <!-- mesa -->
+            <rect x="262" y="236" width="232" height="12" rx="5" class="f-brand"/>
+            <rect x="276" y="248" width="8" height="122" rx="3" class="f-metal"/>
+            <rect x="472" y="248" width="8" height="122" rx="3" class="f-metal"/>
+            <!-- portátil con el paciente en pantalla -->
+            <rect x="336" y="134" width="134" height="96" rx="9" class="f-dark"/>
+            <rect x="344" y="142" width="118" height="80" rx="5" class="f-screen"/>
+            <rect x="375" y="194" width="56" height="28" rx="14" class="f-brand"/>
+            <rect x="398" y="183" width="10" height="13" class="f-skin2"/>
+            <circle cx="403" cy="172" r="15" class="f-skin2"/>
+            <path d="M387 168c0-12 8-19 17-19 10 0 16 7 16 17-4-5-10-7-17-7-6 0-11 3-16 9z" class="f-grey"/>
+            <path d="M324 230h156l9 8H315z" class="f-metal"/>
+            <!-- bocadillo del paciente -->
+            <rect x="380" y="50" width="124" height="58" rx="20" class="f-accent-soft"/>
+            <path d="M412 106l-6 18 22-16z" class="f-accent-soft"/>
+            <rect x="398" y="68" width="88" height="7" rx="3.5" class="f-accent"/>
+            <rect x="398" y="83" width="58" height="7" rx="3.5" class="f-accent" opacity=".55"/>
+            <!-- bocadillo del estudiante -->
+            <rect x="150" y="70" width="112" height="56" rx="20" class="f-card s-line" stroke-width="2"/>
+            <path d="M222 124l10 18 4-20z" class="f-card"/>
+            <circle cx="185" cy="98" r="5.5" class="f-brand"/>
+            <circle cx="206" cy="98" r="5.5" class="f-brand" opacity=".65"/>
+            <circle cx="227" cy="98" r="5.5" class="f-brand" opacity=".35"/>
+            <!-- silla -->
+            <rect x="140" y="194" width="13" height="92" rx="6" class="f-metal"/>
+            <rect x="148" y="272" width="88" height="11" rx="5" class="f-metal"/>
+            <rect x="188" y="283" width="8" height="62" class="f-metal"/>
+            <rect x="160" y="342" width="64" height="7" rx="3.5" class="f-metal"/>
+            <!-- estudiante -->
+            <path d="M184 276 L250 278" class="s-brand" stroke-width="22" stroke-linecap="round" fill="none"/>
+            <path d="M250 278 L256 344" class="s-brand" stroke-width="18" stroke-linecap="round" fill="none"/>
+            <ellipse cx="265" cy="350" rx="17" ry="7" class="f-dark"/>
+            <rect x="160" y="198" width="60" height="84" rx="26" class="f-accent"/>
+            <path d="M212 218 Q258 244 308 230" class="s-accent" stroke-width="17" stroke-linecap="round" fill="none"/>
+            <circle cx="312" cy="229" r="8" class="f-skin"/>
+            <circle cx="190" cy="168" r="23" class="f-hair"/>
+            <circle cx="198" cy="176" r="19" class="f-skin"/>
+            <path d="M178 160c4-14 22-20 34-10 4 4 6 9 6 14-8-6-20-7-30-2-4 2-7 5-10 9z" class="f-hair"/>
+          </svg>
+        </div>
+        <div>
+          <span class="eyebrow">Simulador de pacientes para formación clínica</span>
+          <h1>Ensaya la consulta. <em>Sin riesgo.</em></h1>
+          <p class="lead">Peiros permite a estudiantes y profesionales de la psicología practicar entrevistas clínicas con pacientes simulados que reaccionan como personas reales. Al terminar, reciben una evaluación detallada de su técnica que el docente revisa y completa.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacto">Solicitar una demo</a>
+            <a class="btn btn-ghost" href="#como-funciona">Ver cómo funciona</a>
+          </div>
+          <p class="hero-note">Por texto, por voz o por videollamada. En español de España.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Declaración -->
+    <section class="soft statement">
+      <div class="wrap">
+        <blockquote>Nadie debería tener su primera conversación difícil <em>con un paciente real.</em></blockquote>
+        <p>Preguntar por el suicidio, sostener la resistencia de alguien que no quiere estar en consulta o acompañar a una madre desbordada se aprende practicando. Peiros ofrece un espacio seguro para hacerlo tantas veces como haga falta, antes de llegar a las prácticas.</p>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section id="como-funciona">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Cómo funciona</span>
+          <h2>Tres pasos, <span>quince minutos</span></h2>
+          <p>Cada sesión reproduce una primera entrevista completa, de la acogida al cierre.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="11" r="2.5"/><path d="M5.5 17c.8-2 2-3 3.5-3s2.7 1 3.5 3M14 9h4M14 13h4"/></svg></div>
+            <h3>Elige un paciente</h3>
+            <p>Cada caso tiene su historia, su forma de resistirse y lo que solo cuenta si se gana su confianza.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3a2 2 0 0 1-1-2V7a2 2 0 0 1 0-2z"/><path d="M19 9h1a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-1v3l-3-3h-4"/></svg></div>
+            <h3>Conversa con él</h3>
+            <p>Por escrito, en voz alta o cara a cara en videollamada. El paciente se abre o se cierra según tu forma de preguntar.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
+            <h3>Recibe tu evaluación</h3>
+            <p>Puntuación por criterio con citas literales, recuento de técnicas, momentos clave y qué podrías haber dicho.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pacientes -->
+    <section id="pacientes" class="soft">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Pacientes</span>
+          <h2>Casos que <span>se parecen a la consulta</span></h2>
+          <p>Escritos y revisados por una psicóloga clínica especialista en adicciones. Cada caso se centra en una competencia concreta.</p>
+        </div>
+        <div class="patients">
+          <article class="patient">
+            <div class="patient-head"><div class="patient-avatar">J</div><div><h3>Juan</h3><div class="age">45 años · alcohol</div></div></div>
+            <p>Viene obligado por su mujer y está convencido de que bebe «lo normal».</p>
+            <div class="skill">Manejo de la resistencia</div>
+          </article>
+          <article class="patient">
+            <div class="patient-head"><div class="patient-avatar">D</div><div><h3>Daniel</h3><div class="age">22 años · apuestas online</div></div></div>
+            <p>Pide ayuda para «controlar» el juego, pero no se plantea dejarlo.</p>
+            <div class="skill">Exploración de la ambivalencia</div>
+          </article>
+          <article class="patient">
+            <div class="patient-head"><div class="patient-avatar">C</div><div><h3>Carmen</h3><div class="age">52 años · familiar</div></div></div>
+            <p>Madre de un joven que consume cocaína. Llega desbordada y pidiendo soluciones.</p>
+            <div class="skill">Atención a familias</div>
+          </article>
+          <article class="patient">
+            <div class="patient-head"><div class="patient-avatar">R</div><div><h3>Ramón</h3><div class="age">58 años · alcohol y desesperanza</div></div></div>
+            <p>Consulta por insomnio. Detrás hay ideas de suicidio que no cuenta si no se le pregunta.</p>
+            <div class="skill">Evaluación del riesgo suicida</div>
+          </article>
+          <article class="patient">
+            <div class="patient-head"><div class="patient-avatar">H</div><div><h3>Hugo</h3><div class="age">15 años · videojuegos</div></div></div>
+            <p>Lo trae su madre y contesta con monosílabos. Lo que le pasa no tiene que ver solo con el juego.</p>
+            <div class="skill">Entrevista con adolescentes</div>
+          </article>
+          <article class="patient custom">
+            <h3>Diseñamos tu caso</h3>
+            <p>Creamos pacientes a medida para tu asignatura o tu servicio: trastornos de la conducta alimentaria, duelo, violencia de género, primeras crisis…</p>
+            <a href="#contacto">Cuéntanos qué necesitas →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Para docentes -->
+    <section id="docentes">
+      <div class="wrap split">
+        <div>
+          <div class="section-head" style="margin-bottom:28px">
+            <span class="eyebrow">Para docentes</span>
+            <h2>Más práctica para tus alumnos, <span>sin perder el control</span></h2>
+          </div>
+          <ul class="checks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div><b>Tú tienes la última palabra</b><span>La evaluación de la IA es orientativa. Revisas cada conversación y pones tu valoración.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div><b>Rúbrica de entrevista motivacional</b><span>Evocación, colaboración, empatía, preguntas abiertas, reflejos, manejo de la resistencia y cierre, con criterios propios en cada caso.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div><b>Panel del profesor</b><span>Sesiones, transcripciones, evaluaciones y opinión de cada alumno en un solo sitio.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div><b>Encaja en tu asignatura</b><span>Pensado para el Máster de Psicología General Sanitaria y para la formación continua de equipos clínicos.</span></div></li>
+          </ul>
+        </div>
+        <div class="mock" aria-label="Ejemplo de evaluación">
+          <div class="mock-top">
+            <div class="mock-ring">
+              <svg viewBox="0 0 110 110"><circle cx="55" cy="55" r="46" fill="none" stroke-width="10" class="s-line"/><circle cx="55" cy="55" r="46" fill="none" stroke-width="10" stroke-linecap="round" class="s-accent" stroke-dasharray="289" stroke-dashoffset="72"/></svg>
+              <span>7,5</span>
+            </div>
+            <div><div class="mock-title">Evaluación · Ramón</div><div class="mock-sub">Ejemplo de informe que recibe el alumno</div></div>
+          </div>
+          <div class="mock-row"><span>Empatía</span><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></div>
+          <div class="mock-row"><span>Preguntas abiertas</span><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+          <div class="mock-row"><span>Evaluación del riesgo suicida</span><span class="bars"><i class="on"></i><i class="on"></i><i></i><i></i></span></div>
+          <div class="mock-row"><span>Plan de seguridad y cierre</span><span class="bars"><i class="on"></i><i></i><i></i><i></i></span></div>
+          <div class="mock-quote"><b>Prueba a decir:</b> «Me ha contado que a veces piensa que todos estarían mejor sin usted. ¿Ha llegado a pensar en cómo lo haría?»</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modalidades -->
+    <section class="soft">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Modalidades</span>
+          <h2>Como prefieras <span>practicar</span></h2>
+        </div>
+        <div class="modes">
+          <div class="mode">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 0-1z"/><path d="M8 10h8M8 13h5"/></svg>
+            <h3>Texto</h3><p>Para empezar y para analizar cada frase con calma.</p>
+          </div>
+          <div class="mode">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+            <h3>Voz</h3><p>Hablando en voz alta, con voces de España.</p>
+          </div>
+          <div class="mode">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg>
+            <h3>Videollamada</h3><p>Cara a cara con el paciente, como en la consulta online.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seguridad -->
+    <section id="seguridad">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Seguridad y ética</span>
+          <h2>Un entorno seguro <span>también para los datos</span></h2>
+        </div>
+        <div class="pillars">
+          <div class="pillar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1-4 3.5-6 7-6s6 2 7 6"/></svg><div><h3>Sin pacientes reales</h3><p>Todos los casos son ficticios. Nadie vulnerable queda expuesto a los errores de quien aprende.</p></div></div>
+          <div class="pillar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/></svg><div><h3>Datos en la Unión Europea</h3><p>Servidores en la UE y cumplimiento del RGPD. Las conversaciones no se usan para entrenar modelos.</p></div></div>
+          <div class="pillar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><div><h3>IA transparente</h3><p>El alumno sabe en todo momento que habla con una inteligencia artificial, como exige el Reglamento europeo de IA.</p></div></div>
+          <div class="pillar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18M10.6 6.1A9.9 9.9 0 0 1 12 6c5 0 8.5 4 10 6-.6.8-1.5 2-2.7 3.1M6.6 6.6C4.4 8 2.8 10.4 2 12c1.5 2 5 6 10 6 1.6 0 3-.4 4.3-1"/></svg><div><h3>Tu cámara no se analiza</h3><p>En la videollamada solo ves al paciente. No se graba ni se interpreta tu cara.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="equipo" class="soft">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Quién está detrás</span>
+          <h2>Clínica y tecnología, <span>en el mismo equipo</span></h2>
+        </div>
+        <div class="team">
+          <article class="member">
+            <svg viewBox="0 0 76 76" aria-hidden="true"><circle cx="38" cy="38" r="38" class="f-accent-soft"/><path d="M14 70c3-14 12-21 24-21s21 7 24 21z" class="f-brand"/><circle cx="38" cy="32" r="14" class="f-skin"/><path d="M23 33c-1-12 6-19 15-19s16 6 15 18c-3-6-8-9-15-9s-12 4-15 10z" class="f-hair"/></svg>
+            <div><h3>Dirección clínica</h3><div class="role">Psicóloga clínica especialista en adicciones</div><p>Años de práctica dirigiendo tratamientos de adicciones. Escribe y valida cada caso y cada criterio de evaluación.</p></div>
+          </article>
+          <article class="member">
+            <svg viewBox="0 0 76 76" aria-hidden="true"><circle cx="38" cy="38" r="38" class="f-soft"/><path d="M14 70c3-14 12-21 24-21s21 7 24 21z" class="f-teal"/><circle cx="38" cy="32" r="14" class="f-skin2"/><path d="M24 28c2-9 8-13 14-13 7 0 13 4 14 13-4-3-9-5-14-5s-10 2-14 5z" class="f-hair"/></svg>
+            <div><h3>Tecnología</h3><div class="role">Ingeniería de software</div><p>Diseña la plataforma, la voz y la evaluación, con la privacidad y la fiabilidad como punto de partida.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <div class="wrap contact">
+        <div>
+          <div class="section-head">
+            <span class="eyebrow">Contacto</span>
+            <h2>Te lo enseñamos <span>en 20 minutos</span></h2>
+            <p>Cuéntanos dónde das clase o qué equipo formas y preparamos una demostración con los casos que más te interesen. Estamos buscando universidades y centros para el piloto del curso 2027–28.</p>
+          </div>
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="row">
+            <label for="c-name">Nombre<input id="c-name" name="name" required maxlength="120" autocomplete="name"></label>
+            <label for="c-email">Correo electrónico<input id="c-email" name="email" type="email" required maxlength="200" autocomplete="email"></label>
+          </div>
+          <div class="row">
+            <label for="c-org">Universidad o centro<input id="c-org" name="organization" maxlength="200" autocomplete="organization"></label>
+            <label for="c-role">Perfil
+              <select id="c-role" name="role">
+                <option>Docente o coordinación de máster</option>
+                <option>Dirección de centro o servicio</option>
+                <option>Profesional de la psicología</option>
+                <option>Estudiante</option>
+                <option>Otro</option>
+              </select>
+            </label>
+          </div>
+          <label for="c-message">Mensaje<textarea id="c-message" name="message" maxlength="3000" placeholder="¿Qué te gustaría ver en la demo?"></textarea></label>
+          <label class="hp" aria-hidden="true">No rellenar<input name="website" tabindex="-1" autocomplete="off"></label>
+          <button class="btn btn-primary" type="submit">Solicitar demo</button>
+          <p class="form-legal">Usaremos tus datos solo para responder a tu solicitud y organizar la demo. Puedes ejercer tus derechos de acceso, rectificación y supresión en cualquier momento. Más información en la <a href="privacidad.html">política de privacidad</a>.</p>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="brand" href="index.html" style="font-size:1.05rem">
+        <svg viewBox="0 0 32 32" aria-hidden="true" style="width:24px;height:24px"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="51 18.1"/><circle cx="23.8" cy="8.2" r="3.5" class="f-accent"/></svg>
+        peiros
+      </a>
+      <nav aria-label="Pie de página"><a href="#como-funciona">Cómo funciona</a><a href="#docentes">Para docentes</a><a href="#contacto">Contacto</a><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a></nav>
+      <span>© 2026 Peiros · Versión de prueba</span>
+    </div>
+  </footer>
+
+  <script src="assets/landing.js"></script>
+</body>
+</html>
