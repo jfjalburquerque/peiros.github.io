@@ -13,6 +13,7 @@
 
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
+  if (!form) return;  // páginas sin formulario (blog, páginas legales)
   form.addEventListener("submit", async (ev) => {
     ev.preventDefault();
     const data = Object.fromEntries(new FormData(form));

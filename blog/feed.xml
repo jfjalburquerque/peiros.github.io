@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Blog de Peiros</title>
+  <link>https://peiros.app/blog/</link>
+  <description>Entrevista clínica y formación en psicología</description>
+  <language>es-es</language>
+  <item>
+    <title>Cómo practicar la entrevista clínica antes de las prácticas (y sin pacientes reales)</title>
+    <link>https://peiros.app/blog/practicar-entrevista-clinica/</link>
+    <guid>https://peiros.app/blog/practicar-entrevista-clinica/</guid>
+    <pubDate>Tue, 24 Nov 2026 08:00:00 +0000</pubDate>
+    <description>Cinco formas de entrenar la entrevista clínica cuando todavía estudias psicología: role-play, grabaciones, supervisión, pacientes estandarizados y simuladores con IA.</description>
+  </item>
+  <item>
+    <title>Entrevista motivacional: las habilidades OARS explicadas con ejemplos</title>
+    <link>https://peiros.app/blog/entrevista-motivacional-oars-ejemplos/</link>
+    <guid>https://peiros.app/blog/entrevista-motivacional-oars-ejemplos/</guid>
+    <pubDate>Tue, 24 Nov 2026 08:00:00 +0000</pubDate>
+    <description>Preguntas abiertas, afirmaciones, reflejos y resúmenes: qué son las habilidades OARS de la entrevista motivacional, ejemplos de frases y errores frecuentes.</description>
+  </item>
+  <item>
+    <title>El paciente que no quiere estar en consulta: cómo trabajar la resistencia en la primera sesión</title>
+    <link>https://peiros.app/blog/resistencia-paciente-primera-consulta/</link>
+    <guid>https://peiros.app/blog/resistencia-paciente-primera-consulta/</guid>
+    <pubDate>Tue, 24 Nov 2026 08:00:00 +0000</pubDate>
+    <description>Qué hacer cuando un paciente llega obligado, a la defensiva o minimizando el problema. Claves para reducir la discordia en la primera entrevista, con ejemplos de frases.</description>
+  </item>
+  <item>
+    <title>Primera entrevista en adicciones: guía práctica para clínicos en formación</title>
+    <link>https://peiros.app/blog/primera-entrevista-adicciones/</link>
+    <guid>https://peiros.app/blog/primera-entrevista-adicciones/</guid>
+    <pubDate>Tue, 24 Nov 2026 08:00:00 +0000</pubDate>
+    <description>Cómo plantear la primera entrevista con una persona con un problema de consumo: encuadre, exploración del consumo en UBE, herramientas como el AUDIT, la familia y los errores que conviene evitar.</description>
+  </item>
+  <item>
+    <title>Pacientes simulados con IA en la formación en psicología: qué aportan y qué no</title>
+    <link>https://peiros.app/blog/pacientes-simulados-ia-formacion-psicologia/</link>
+    <guid>https://peiros.app/blog/pacientes-simulados-ia-formacion-psicologia/</guid>
+    <pubDate>Tue, 24 Nov 2026 08:00:00 +0000</pubDate>
+    <description>Del paciente estandarizado al simulador con inteligencia artificial: ventajas, límites y cómo integrarlo en la docencia de la entrevista clínica en psicología.</description>
+  </item>
+  <item>
+    <title>¿Preguntar por el suicidio aumenta el riesgo? Qué dice la evidencia y cómo entrenarlo</title>
+    <link>https://peiros.app/blog/preguntar-por-el-suicidio/</link>
+    <guid>https://peiros.app/blog/preguntar-por-el-suicidio/</guid>
+    <pubDate>Tue, 24 Nov 2026 08:00:00 +0000</pubDate>
+    <description>Preguntar directamente por la ideación suicida no la provoca. Qué dice la investigación, cómo formular la pregunta, qué explorar después y cómo practicarlo antes de necesitarlo.</description>
+  </item>
+</channel>
+</rss>

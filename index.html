@@ -6,6 +6,21 @@
   <title>Peiros · Simulador de pacientes para formación clínica</title>
   <meta name="description" content="Peiros es un simulador de pacientes con IA para que estudiantes y profesionales de la psicología ensayen entrevistas clínicas sin riesgo y reciban una evaluación de su técnica.">
   <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://peiros.app/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#123a43">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Peiros">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:url" content="https://peiros.app/">
+  <meta property="og:title" content="Peiros · Simulador de pacientes para formación clínica">
+  <meta property="og:description" content="Ensaya la consulta sin riesgo: pacientes simulados con IA para practicar la entrevista clínica en psicología, con evaluación detallada y revisión docente.">
+  <meta property="og:image" content="https://peiros.app/assets/brand/og-peiros.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Peiros. Ensaya la consulta. Sin riesgo.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
@@ -14,6 +29,10 @@
     try { const t = localStorage.getItem("peiros-theme"); if (t) document.documentElement.dataset.theme = t; } catch (_) {}
   </script>
   <link rel="stylesheet" href="assets/landing.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://peiros.app/#organizacion", "name": "Peiros", "url": "https://peiros.app/", "logo": "https://peiros.app/assets/brand/apple-touch-icon.png", "description": "Simulador de pacientes con inteligencia artificial para la formación clínica en psicología."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://peiros.app/#web", "name": "Peiros", "url": "https://peiros.app/", "inLanguage": "es-ES", "publisher": {"@id": "https://peiros.app/#organizacion"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Peiros", "url": "https://peiros.app/", "applicationCategory": "EducationalApplication", "operatingSystem": "Navegador web", "inLanguage": "es-ES", "description": "Simulador de pacientes con IA para practicar la entrevista clínica por texto, voz o videollamada, con evaluación detallada de la técnica y revisión docente.", "publisher": {"@id": "https://peiros.app/#organizacion"}, "audience": {"@type": "EducationalAudience", "educationalRole": "student"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué es Peiros?", "acceptedAnswer": {"@type": "Answer", "text": "Peiros es un simulador de pacientes con inteligencia artificial para la formación clínica. Estudiantes y profesionales de la psicología practican entrevistas con pacientes ficticios que reaccionan como personas reales, y reciben una evaluación detallada de su técnica que el docente revisa y completa."}}, {"@type": "Question", "name": "¿Sustituye a las prácticas o al docente?", "acceptedAnswer": {"@type": "Answer", "text": "No. Peiros es un entrenamiento previo: permite ensayar tantas veces como haga falta antes de atender a pacientes reales. La evaluación automática es orientativa y la valoración final la hace siempre el docente."}}, {"@type": "Question", "name": "¿Qué casos clínicos incluye?", "acceptedAnswer": {"@type": "Answer", "text": "Incluye casos de adicciones y salud mental: un hombre que acude obligado por su consumo de alcohol, un joven con apuestas deportivas online, una madre preocupada por el consumo de cocaína de su hijo, un paciente con ideación suicida y un adolescente con uso problemático de videojuegos. También diseñamos casos a medida para cada asignatura."}}, {"@type": "Question", "name": "¿Cómo se practica: por escrito, por voz o por vídeo?", "acceptedAnswer": {"@type": "Answer", "text": "De las tres formas. Se puede escribir, hablar en voz alta o hacer una videollamada con el paciente, que responde con voz y rostro. Funciona en el navegador, sin instalar nada, también desde el móvil."}}, {"@type": "Question", "name": "¿Cómo se evalúa cada sesión?", "acceptedAnswer": {"@type": "Answer", "text": "Al terminar, el estudiante recibe una puntuación por criterio con citas literales de lo que dijo, un recuento de técnicas (preguntas abiertas, cerradas y reflejos), los momentos clave de la entrevista y qué podría haber dicho. El docente puede revisar cada sesión y añadir su propia valoración."}}, {"@type": "Question", "name": "¿Qué pasa con los datos?", "acceptedAnswer": {"@type": "Answer", "text": "Los servidores están en la Unión Europea, los proveedores de inteligencia artificial están configurados para no usar los datos para entrenar sus modelos y todos los pacientes son ficticios. Los detalles están en la política de privacidad."}}, {"@type": "Question", "name": "¿Cómo puedo probarlo en mi universidad o centro?", "acceptedAnswer": {"@type": "Answer", "text": "Estamos haciendo pruebas piloto con universidades y centros de formación. Solicita una demo en el formulario y te contamos las condiciones."}}]}</script>
   <script>window.PEIROS_APP_URL = "https://campus.peiros.app";</script>
 </head>
 <body>
@@ -29,6 +48,7 @@
         <a href="#docentes">Para docentes</a>
         <a href="#seguridad">Seguridad</a>
         <a href="#equipo">Equipo</a>
+        <a href="blog/">Blog</a>
       </nav>
       <div class="header-actions">
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro">
@@ -287,6 +307,46 @@
       </div>
     </section>
 
+    <!-- Preguntas frecuentes -->
+    <section id="preguntas">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2>Lo que suelen <span>preguntarnos</span></h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>¿Qué es Peiros?</summary>
+            <p>Peiros es un simulador de pacientes con inteligencia artificial para la formación clínica. Estudiantes y profesionales de la psicología practican entrevistas con pacientes ficticios que reaccionan como personas reales, y reciben una evaluación detallada de su técnica que el docente revisa y completa.</p>
+          </details>
+          <details>
+            <summary>¿Sustituye a las prácticas o al docente?</summary>
+            <p>No. Peiros es un entrenamiento previo: permite ensayar tantas veces como haga falta antes de atender a pacientes reales. La evaluación automática es orientativa y la valoración final la hace siempre el docente.</p>
+          </details>
+          <details>
+            <summary>¿Qué casos clínicos incluye?</summary>
+            <p>Incluye casos de adicciones y salud mental: un hombre que acude obligado por su consumo de alcohol, un joven con apuestas deportivas online, una madre preocupada por el consumo de cocaína de su hijo, un paciente con ideación suicida y un adolescente con uso problemático de videojuegos. También diseñamos casos a medida para cada asignatura.</p>
+          </details>
+          <details>
+            <summary>¿Cómo se practica: por escrito, por voz o por vídeo?</summary>
+            <p>De las tres formas. Se puede escribir, hablar en voz alta o hacer una videollamada con el paciente, que responde con voz y rostro. Funciona en el navegador, sin instalar nada, también desde el móvil.</p>
+          </details>
+          <details>
+            <summary>¿Cómo se evalúa cada sesión?</summary>
+            <p>Al terminar, el estudiante recibe una puntuación por criterio con citas literales de lo que dijo, un recuento de técnicas (preguntas abiertas, cerradas y reflejos), los momentos clave de la entrevista y qué podría haber dicho. El docente puede revisar cada sesión y añadir su propia valoración.</p>
+          </details>
+          <details>
+            <summary>¿Qué pasa con los datos?</summary>
+            <p>Los servidores están en la Unión Europea, los proveedores de inteligencia artificial están configurados para no usar los datos para entrenar sus modelos y todos los pacientes son ficticios. Los detalles están en la <a href="privacidad.html">política de privacidad</a>.</p>
+          </details>
+          <details>
+            <summary>¿Cómo puedo probarlo en mi universidad o centro?</summary>
+            <p>Estamos haciendo pruebas piloto con universidades y centros de formación. Solicita una demo en el formulario y te contamos las condiciones.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- Contacto -->
     <section id="contacto">
       <div class="wrap contact">
@@ -330,7 +390,7 @@
         <svg viewBox="0 0 32 32" aria-hidden="true" style="width:24px;height:24px"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="51 18.1"/><circle cx="23.8" cy="8.2" r="3.5" class="f-accent"/></svg>
         peiros
       </a>
-      <nav aria-label="Pie de página"><a href="#como-funciona">Cómo funciona</a><a href="#docentes">Para docentes</a><a href="#contacto">Contacto</a><a href="https://campus.peiros.app/entrar">Entrar</a><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a></nav>
+      <nav aria-label="Pie de página"><a href="#como-funciona">Cómo funciona</a><a href="#docentes">Para docentes</a><a href="#preguntas">Preguntas frecuentes</a><a href="blog/">Blog</a><a href="#contacto">Contacto</a><a href="https://campus.peiros.app/entrar">Entrar</a><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a></nav>
       <span>© 2026 Peiros · Versión de prueba</span>
     </div>
   </footer>
