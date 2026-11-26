@@ -296,3 +296,6 @@ section.soft { background: var(--bg-soft); }
 .related { margin-top: 56px; }
 .related h2 { font-size: 1.2rem; font-weight: 800; margin: 0 0 16px; }
 .related .post-card h3 { font-size: 1.02rem; }
+
+.contact-mail { color: var(--muted); }
+.contact-mail a { color: var(--teal); font-weight: 600; }
