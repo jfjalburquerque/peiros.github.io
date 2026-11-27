@@ -11,6 +11,21 @@
     try { localStorage.setItem("peiros-theme", next); } catch (_) {}
   });
 
+  // Menú desplegable en pantallas estrechas
+  const menuButton = document.getElementById("menu-toggle");
+  const nav = document.getElementById("site-nav");
+  if (menuButton && nav) {
+    const setOpen = (open) => {
+      nav.classList.toggle("open", open);
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.setAttribute("aria-label", open ? "Cerrar el menú" : "Abrir el menú");
+    };
+    menuButton.addEventListener("click", () => setOpen(!nav.classList.contains("open")));
+    nav.addEventListener("click", (ev) => { if (ev.target.closest("a")) setOpen(false); });
+    document.addEventListener("keydown", (ev) => { if (ev.key === "Escape") setOpen(false); });
+    document.addEventListener("click", (ev) => { if (!ev.target.closest(".site-header")) setOpen(false); });
+  }
+
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
   if (!form) return;  // páginas sin formulario (blog, páginas legales)

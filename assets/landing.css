@@ -194,8 +194,24 @@ section.soft { background: var(--bg-soft); }
 /* --- Ilustración --- */
 .illustration svg { width: 100%; height: auto; display: block; }
 
+.menu-toggle { display: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--text); place-items: center; cursor: pointer; padding: 0; }
+.menu-toggle svg { width: 20px; height: 20px; }
+.menu-toggle path { transition: transform .2s, opacity .2s; transform-origin: 12px 12px; }
+.menu-toggle[aria-expanded="true"] .l1 { transform: translateY(5px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] .l2 { opacity: 0; }
+.menu-toggle[aria-expanded="true"] .l3 { transform: translateY(-5px) rotate(-45deg); }
+.nav-mobile-only { display: none; }
+
 @media (max-width: 900px) {
-  .site-nav { display: none; }
+  .menu-toggle { display: grid; }
+  .site-header .wrap { position: relative; }
+  .site-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; margin: 0;
+              padding: 6px 24px 18px; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 18px 30px rgba(19, 37, 42, .08); }
+  .site-nav.open { display: flex; }
+  .site-nav a { padding: 14px 0; font-size: 1.05rem; color: var(--text); border-bottom: 1px solid var(--line); }
+  .site-nav a:last-child { border-bottom: 0; }
+  .nav-mobile-only { display: block; }
+  .header-actions { margin-left: auto; }
   .hero .wrap, .split, .contact { grid-template-columns: 1fr; gap: 40px; }
   .hero .illustration { order: 2; }
   .steps, .modes { grid-template-columns: 1fr; }
@@ -206,6 +222,10 @@ section.soft { background: var(--bg-soft); }
   section { padding-block: 64px; }
   .wrap { padding-inline: 16px; }
   .header-actions .btn-ghost { display: none; }
+  .site-header .wrap { gap: 12px; }
+  .header-actions { gap: 8px; }
+  .theme-toggle, .menu-toggle { width: 38px; height: 38px; }
+  .site-nav { padding-inline: 16px; }
   .contact .row { grid-template-columns: 1fr; }
   .member { grid-template-columns: 1fr; }
   .patients { grid-template-columns: 1fr; }
@@ -299,3 +319,9 @@ section.soft { background: var(--bg-soft); }
 
 .contact-mail { color: var(--muted); }
 .contact-mail a { color: var(--teal); font-weight: 600; }
+.header-actions .btn { white-space: nowrap; }
+@media (max-width: 400px) {
+  .site-header .brand { font-size: 1.1rem; }
+  .header-actions .btn-primary { padding-inline: 13px; font-size: .84rem; }
+  .site-header .wrap, .header-actions { gap: 6px; }
+}
